@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset='UTF-8')
+    title JS
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    link(rel='stylesheet', href='style/css/main.css')
+  body
+    .container
+        .row
+            .col-sm-6.col-sm-offset-3
+                #boxSimon
+                    .container-fluid
+                        #setPanel
+                            h2 Simon
+                            .buttonSection
+                                .container-fluid
+                                    .col-xs-4
+                                        .btn-panel#onOff
+                                        i On/Off
+                                    .col-xs-4
+                                        .btn-panel#start
+                                        i start
+                                    .col-xs-4
+                                        .btn-panel#strict
+                                        i strict
+                            span.display &nbsp;&nbsp;
+                        .row
+                            .itemSimon.col-xs-6#green
+                                span 
+                            .itemSimon.col-xs-6#red
+                                span
+                        .row 
+                            .itemSimon.col-xs-6#yellow
+                                span
+                            .itemSimon.col-xs-6#blue
+                                span
+    script(src='script/demo.js')
+
+    

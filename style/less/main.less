@@ -1,0 +1,92 @@
+@green: #2E6E3D;
+@red: #BF2C2C;
+@blue: #344973;
+@yellow: #D1D00F;
+@dark: #121A29;
+@borderRadius: 95%;
+#boxSimon {
+	position: relative;
+	border: 25px solid @dark;
+	border-radius: 50%;
+	#setPanel {
+		padding: 2%;
+		text-align: center;
+		position: absolute;
+		border: 8px solid @dark;
+		background-color: white;
+		border-radius: @borderRadius;
+		z-index: 99;
+		.btn-panel {
+			border-radius: @borderRadius;
+			width: 15px;
+			height: 15px;
+			border: 3px solid @dark;
+			cursor: pointer;
+		}
+		.display {
+			border: 1px solid @dark;
+			border-radius: 8px;
+			padding: 1% 6%;
+			background-color: lighten(@dark, 10%);
+			color: @red;
+			font-size: 1.3em;
+			line-height: 3em;
+		}
+	}
+	.itemSimon {
+		//border: 20px solid transparent;
+		position: relative;
+		padding: 0;
+		&#green {
+			border-top-left-radius: @borderRadius;			
+			border-bottom: 10px solid @dark;
+			border-right: 10px solid @dark; 
+			span {
+				.setSpan(@green);
+				border-top-left-radius: @borderRadius;
+			}
+		}
+		&#red {
+			border-top-right-radius: @borderRadius;
+			border-bottom: 10px solid @dark;
+			border-left: 10px solid @dark;
+			span {
+				.setSpan(@red);
+				border-top-right-radius: @borderRadius;
+			}
+		}
+		&#blue {
+			border-bottom-right-radius: @borderRadius;
+			border-top: 10px solid @dark;
+			border-left: 10px solid @dark;
+			span {
+				.setSpan(@blue);
+				border-bottom-right-radius: @borderRadius;
+			}
+		}
+		&#yellow {
+			border-bottom-left-radius: @borderRadius;
+			border-top: 10px solid @dark;
+			border-right: 10px solid @dark;
+			span {
+				.setSpan(@yellow);
+				border-bottom-left-radius: @borderRadius;
+			}
+		}
+	}
+}
+/** helper class */
+.bgRed {
+	background-color: @red;
+}
+.bgGreen {
+	background-color: @green;
+}
+.bgGray {
+	background-color: @dark;
+}
+.setSpan(@colorSpan){
+	background-color: @colorSpan;
+	position: absolute;
+	width: 100%;
+}
