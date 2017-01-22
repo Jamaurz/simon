@@ -83,8 +83,6 @@ function randSeries() {
 }
 function displaySeries() {
 	canClick = false;
-	// console.log('series', series);
-	// console.log('temp', temp2Step);
 	animateItem(temp2Step);
 	var index = $.inArray(arrayColor[series[temp2Step]], arrayColor);
 	if(arraySound[index])
@@ -115,7 +113,6 @@ function play() {
 		temp2Step = 0;
 		displaySeries();	
 	} else {
-		console.log('win');
 		$('.display').text('WIN');
 		setTimeout(function() {
 			clear();
@@ -142,13 +139,11 @@ $('.itemSimon').on('mouseup', function() {
 		setTimeout(function() {
 			if(checkAll(temp)) {
 				if(tempStep == currentCount) {
-					//console.log('ok. next');
 					currentCount++;
 					$('.display').text(currentCount);
 					setTimeout(play, 1000);
 				}
 			} else {
-				//console.log('one more time');
 				$('.display').text('!!');
 				clearTimeout(timerRepeat);
 				if(strictLicz) {
@@ -175,9 +170,6 @@ function checkAll(check2) {
 	}
 }
 function checkSeries(check1, check2) {
-	// console.log('temp step ' + tempStep);
-	// console.log('computer :' + arrayColor[series[check1]]);
-	// console.log('player :' + check2);
 	return (arrayColor[series[check1]] == check2);
 }
 function clear() {
